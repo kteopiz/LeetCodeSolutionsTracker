@@ -1,4 +1,7 @@
 # LeetCodeSolutionsTracker
-My personal repository to track and note down all leetcode solutions I have done!  <br>
 
-All solutions will be done in Java and committed to this repo to help me practice Git and GitHub Usage along with LeetCode solving
+My personal repository to track and note down all leetcode solutions I have done! <br>
+
+Solutions will be done in Python, here is a list of the ones I have accomplished so far:
+
+- Two Sum
