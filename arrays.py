@@ -12,4 +12,4 @@ def twosum(nums, target):
                 ht[nums[i]] = i
 
 if __name__ == "__main__":
-    pass
+     pass
