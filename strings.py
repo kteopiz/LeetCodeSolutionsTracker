@@ -15,7 +15,7 @@ def is_palindrome(x):
                 end -= 1
         return True 
 
-def lengthOfLongestSubstring(s):
+def length_of_longest_substring(s):
     slow, fast, longest = 0,0,0
 
     letter_set = set()

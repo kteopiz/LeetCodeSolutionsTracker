@@ -1,5 +1,5 @@
 
-def twosum(nums, target):
+def two_sum(nums, target):
      # HashMap used to track elements we have seen so far and map them to their index number
         ht = {}
         
@@ -10,6 +10,9 @@ def twosum(nums, target):
             # if it is not, add it to the hashmap to use for checking the complement of future elements
             else:
                 ht[nums[i]] = i
+
+def best_time_buy_stock():
+     pass
 
 if __name__ == "__main__":
      pass
