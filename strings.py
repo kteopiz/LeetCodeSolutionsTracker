@@ -14,44 +14,41 @@ def is_palindrome(x):
                 start += 1
                 end -= 1
         return True 
+
 def lengthOfLongestSubstring(s):
+    slow, fast, longest = 0,0,0
 
-        letter_set = set()
+    letter_set = set()
 
-        longest, slow, fast = 0, 0, 0
+    # Edge Cases for smaller strings
+    if len(s) == 0:
+         return 0
+    elif len(s) == 1:
+         return 1
 
-        # Edge Cases for small strings
-        if len(s) == 0:
-            return 0
-        elif len(s) == 1:
-            return 1
-        
-        while fast < (len(s)):
-            if s[fast] in letter_set:
-                # Save length of longest substring if it is larger than the current max length substring
-                if len(letter_set) > longest:
-                    longest = len(letter_set)
-                # Reset the letter set
-                letter_set = set()
-                # Pull the slow pointer forward to check
-                slow = fast
-            else:
-                letter_set.add(s[fast])
-                fast += 1
-        print(letter_set)
-        if longest < len(letter_set):
-             return len(letter_set)
+    while fast < len(s):
+        if s[fast] in letter_set:
+            # if the length of the current substring is greatest, save it
+            if longest < len(letter_set):
+                longest = len(letter_set)
+            # Remove the already seen letter and push the window one over so the set is valid and represents the window's contents
+            letter_set.remove(s[slow]) 
+            slow += 1
         else:
-             return longest
+             # If the letter is unique, add it to the set and slide the right bound of the window
+             letter_set.add(s[fast])
+             fast += 1
+    
+    # Covers for two cases:
+             # 1) Where the string is completely unique, the set will hold the true value of longest substring as it will not be updated
+             # 2) When the longest substring ends on the last letter of the string, the set will also hold the true value of the longest substring and will not be updated
+    if longest < len(letter_set):
+         return len(letter_set)
+    else:
+         return longest
 
 if __name__ == "__main__":
-    # Current Case does not work couple ideas on why:
-    # 1) Set updation -> Right now we are totally resetting the set once we find a duplicate ...
-    # Achieve this by jumping the slow poitner to the fast one, this skips over a letter that belongs to the longest substring
-    # Currently -> 407/987 test cases passing on LC
-    s = "dvdf"
-
-    print(lengthOfLongestSubstring(s))
+    pass
     
 
 
