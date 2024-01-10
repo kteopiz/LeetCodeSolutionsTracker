@@ -46,6 +46,17 @@ def length_of_longest_substring(s):
          return len(letter_set)
     else:
          return longest
+    
+def merge_alternately(word1, word2):
+    result = ""
+
+    if len(word1) > 0 and len(word2) > 0:
+        result += word1[0] + word2[0]
+        return result + merge_alternately(word1[1:], word2[1:])
+    elif len(word1) == 0:
+        return result + word2
+    else: 
+        return result + word1
 
 if __name__ == "__main__":
     pass
