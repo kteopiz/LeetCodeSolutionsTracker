@@ -11,8 +11,24 @@ def two_sum(nums, target):
             else:
                 ht[nums[i]] = i
 
-def best_time_buy_stock():
-     pass
+def best_time_buy_stock(prices):
+    low, high, profit = 0,1,0
+
+    # Edge Case: If only one price in the array, no profit can be made
+    if len(prices) == 1:
+        return profit
+
+    while high < len(prices):
+        if prices[low] > prices[high]:
+            low = high
+        else:
+            if profit < prices[high] - prices[low]:
+                profit = prices[high] - prices[low]
+        high += 1
+    
+    return profit
+
 
 if __name__ == "__main__":
-     pass
+    prices = [7,1,5,3,6,4]
+    print(best_time_buy_stock(prices))
