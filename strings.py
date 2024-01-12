@@ -58,6 +58,45 @@ def merge_alternately(word1, word2):
     else: 
         return result + word1
 
+def roman_to_int(s):
+    ht = {
+        "I": 1,
+        "IV" : 4,
+        "V":5,
+        "IX": 9,
+        "X":10,
+        "XL":40,
+        "L": 50,
+        "XC": 90,
+        "C": 100,
+        "CD": 400,
+        "D": 500,
+        "CM": 900,
+        "M": 1000 }
+    left = 0
+    right = 1
+    result = 0
+
+    if len(s) < 2:
+        return ht[s[left]]
+    
+    while left < len(s) and right <= len(s):
+        # Odd Number Case, reached end of string
+        if right >= len(s):
+            result += ht[s[left]]
+            return result
+        if s[left] + s[right] in ht:
+            result += ht[s[left] + s[right]]
+            left += 2
+            right += 2
+        else:
+            result += ht[s[left]]
+            left += 1
+            right += 1
+    
+    return result
+     
+
 if __name__ == "__main__":
     pass
     
