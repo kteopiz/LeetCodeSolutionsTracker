@@ -28,7 +28,45 @@ def best_time_buy_stock(prices):
     
     return profit
 
+def product_except_self(nums):
+    # Two Pass Approach -> Calculate prefix then postfix products of each position
+    result = [0 for x in range(len(nums))]
+    pre = 1
+    post = 1
+
+    for i in range(len(nums)):
+        if i == 0:
+            result[i] = pre
+        else: 
+            pre *= nums[i - 1]
+            result[i] = pre
+    
+    for i in range(len(nums) - 1, -1, -1):
+        if i == len(nums) -1:
+            result[i] *= post
+        else:
+            post *= nums[i + 1]
+            result[i] *= post
+    return result
+
+def contains_duplicate(nums):
+    ht = set()
+
+    if len(nums) < 2:
+        return False
+
+    for i in nums:
+        if i in ht:
+            return True
+        else:
+            ht.add(i)
+    return False
 
 if __name__ == "__main__":
-    prices = [7,1,5,3,6,4]
-    print(best_time_buy_stock(prices))
+    n = [5,9,2,-9,-9,-7,-8,7,-9,10]
+
+    print(product_except_self(n))
+
+    
+
+    
