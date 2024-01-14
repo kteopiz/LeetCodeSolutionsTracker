@@ -49,7 +49,8 @@ def length_of_longest_substring(s):
     
 def merge_alternately(word1, word2):
     result = ""
-
+    # Recursively take one letter off each word
+    # In the case where one word is shorter than the other, return the existing result plus the rest of the other word -> no more alternation
     if len(word1) > 0 and len(word2) > 0:
         result += word1[0] + word2[0]
         return result + merge_alternately(word1[1:], word2[1:])
@@ -59,6 +60,7 @@ def merge_alternately(word1, word2):
         return result + word1
 
 def roman_to_int(s):
+    # Save all values in a hashtable for effecient access and checking
     ht = {
         "I": 1,
         "IV" : 4,
@@ -73,23 +75,29 @@ def roman_to_int(s):
         "D": 500,
         "CM": 900,
         "M": 1000 }
+    # left and right create a sliding window of the two current elements
     left = 0
     right = 1
     result = 0
 
+    # if the length of the string is less than 2, there is only single letter values possible
     if len(s) < 2:
         return ht[s[left]]
     
+    # We include right because it can be at most one index past the array which == len(s)
     while left < len(s) and right <= len(s):
         # Odd Number Case, reached end of string
         if right >= len(s):
             result += ht[s[left]]
             return result
+        # Checking if the current window is a valid 2 letter value
         if s[left] + s[right] in ht:
             result += ht[s[left] + s[right]]
+            # If so we push the window completely past it 
             left += 2
             right += 2
         else:
+            # If we only have a valid single value, it is on the left of the window, we increment one to check the next pair
             result += ht[s[left]]
             left += 1
             right += 1

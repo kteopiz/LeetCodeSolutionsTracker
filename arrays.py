@@ -1,15 +1,15 @@
 
 def two_sum(nums, target):
-     # HashMap used to track elements we have seen so far and map them to their index number
-        ht = {}
-        
-        for i in range(len(nums)):
-            # Can return an answer if the current element's complement is in the hash table
-            if target - nums[i] in ht:
-                return [i, ht[target - nums[i]]]
-            # if it is not, add it to the hashmap to use for checking the complement of future elements
-            else:
-                ht[nums[i]] = i
+    # HashMap used to track elements we have seen so far and map them to their index number
+    ht = {}
+    
+    for i in range(len(nums)):
+        # Can return an answer if the current element's complement is in the hash table
+        if target - nums[i] in ht:
+            return [i, ht[target - nums[i]]]
+        # if it is not, add it to the hashmap to use for checking the complement of future elements
+        else:
+            ht[nums[i]] = i
 
 def best_time_buy_stock(prices):
     low, high, profit = 0,1,0
@@ -18,10 +18,14 @@ def best_time_buy_stock(prices):
     if len(prices) == 1:
         return profit
 
+    # Loop does not stop till right bound of the window exceeds the array
     while high < len(prices):
+        # If we find a smaller element than the one at the left than the right, the max profit is found for that element
         if prices[low] > prices[high]:
             low = high
         else:
+            # If we are still on the smallest number seen so far, check if a greater profit is made at the right bound of the window
+            # Update the profit if necessary
             if profit < prices[high] - prices[low]:
                 profit = prices[high] - prices[low]
         high += 1
@@ -35,10 +39,13 @@ def product_except_self(nums):
     post = 1
 
     for i in range(len(nums)):
+        # If we are at the farthest L or R element, we assume the prefix is 1
         if i == 0:
+            # For the first prefix, assign a value dont multiply as the array intialized as zeros
             result[i] = pre
         else: 
             pre *= nums[i - 1]
+            # Same as here, assign a value dont multiply
             result[i] = pre
     
     for i in range(len(nums) - 1, -1, -1):
