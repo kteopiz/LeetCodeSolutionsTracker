@@ -15,6 +15,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Contains Duplicate (Array)
 - Merge Strings Alternately (Strings)
 - First Letter Twice (Strings)
+- First Bad Version (Binary Search)
 
 ### Medium Questions
 
