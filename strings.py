@@ -103,10 +103,21 @@ def roman_to_int(s):
             right += 1
     
     return result
+
+def first_letter_twice(s) -> str:
+    check = set()
+
+    for i in s:
+        if i in check:
+            return i
+        else:
+            check.add(i)
+
+
      
 
 if __name__ == "__main__":
-    pass
+    print(not False and not False)
     
 
 
