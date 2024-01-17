@@ -110,10 +110,33 @@ def unique_num_occurences(arr):
             checker.add(ht[val])
     return True
 
-if __name__ == "__main__":
-    n = [1,0,0,0,1,0,0]
+def following_key_array(nums, key):
+    ht = {}
 
-    print(can_place_flowers(n, 2))
+    for i in range(len(nums)):
+        if nums[i] == key and i < len(nums) - 1:
+            if nums[i+1] in ht:
+                ht[nums[i+1]] += 1
+            else:
+                ht[nums[i+1]] = 1
+    
+    high = 0
+
+    most_freq = 0
+    high = 0
+
+    for x in ht:
+        if ht[x] > high:
+            most_freq = x
+            high = ht[x]
+    return most_freq
+
+
+
+if __name__ == "__main__":
+    n = [11,22,11,33,11,33]
+
+    print(following_key_array(n, 11))
 
     
 
