@@ -18,6 +18,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - First Bad Version (Binary Search)
 - Can Place Flower (Array)
 - Unique Number of Occurrences (Array)
+- Reverse a Linked List (Linked List)
 
 ### Medium Questions
 
