@@ -69,10 +69,35 @@ def contains_duplicate(nums):
             ht.add(i)
     return False
 
-if __name__ == "__main__":
-    n = [5,9,2,-9,-9,-7,-8,7,-9,10]
+def can_place_flowers(flowerbed, n):
+    if len(flowerbed) == 1 and n > 0:
+            if flowerbed[0] == 1: # n <= 1
+                return False
+            elif flowerbed[0] == 0 and n == 1:
+                return True
 
-    print(product_except_self(n))
+    for i in range(len(flowerbed)):
+        if n == 0:
+            return True
+        # 2 Edge Cases at either end of the flowerbed
+        if i == 0:
+            if flowerbed[i] == 0 and flowerbed[i+1] == 0:
+                flowerbed[i] = 1
+                n -= 1
+        elif i == len(flowerbed) - 1:
+            if flowerbed[i] == 0 and flowerbed[i-1] == 0:
+                flowerbed[i] = 1
+                n -= 1
+        else:
+            if flowerbed[i] == 0 and flowerbed[i-1] == 0 and flowerbed[i+1] == 0:
+                flowerbed[i] = 1
+                n -= 1
+    return n <= 0
+
+if __name__ == "__main__":
+    n = [1,0,0,0,1,0,0]
+
+    print(can_place_flowers(n, 2))
 
     
 
