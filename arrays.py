@@ -94,6 +94,22 @@ def can_place_flowers(flowerbed, n):
                 n -= 1
     return n <= 0
 
+def unique_num_occurences(arr):
+    ht = {}
+    checker = set()
+
+    for i in arr:
+        if i in ht:
+            ht[i] += 1
+        else:
+            ht[i] = 1
+    for val in ht:
+        if ht[val] in checker:
+            return False
+        else:
+            checker.add(ht[val])
+    return True
+
 if __name__ == "__main__":
     n = [1,0,0,0,1,0,0]
 

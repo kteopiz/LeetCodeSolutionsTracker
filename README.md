@@ -17,6 +17,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - First Letter Twice (Strings)
 - First Bad Version (Binary Search)
 - Can Place Flower (Array)
+- Unique Number of Occurrences (Array)
 
 ### Medium Questions
 
