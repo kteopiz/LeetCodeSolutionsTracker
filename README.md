@@ -16,6 +16,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Merge Strings Alternately (Strings)
 - First Letter Twice (Strings)
 - First Bad Version (Binary Search)
+- Can Place Flower (Array)
 
 ### Medium Questions
 
