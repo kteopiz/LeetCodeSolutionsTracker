@@ -174,6 +174,17 @@ def valid_parenthesis(s):
 
     return len(stack) == 0
 
+def is_subsequence(s,t):
+    count = 0
+    i = 0
+    
+    while count < len(s) and i < len(t):
+        if s[count] == t[i]:
+            count += 1
+        i += 1
+    
+    return count == len(s)
+            
 
 
      

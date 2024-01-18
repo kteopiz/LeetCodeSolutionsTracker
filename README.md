@@ -22,6 +22,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Most Frequent Number Following Key in an Array (Array)
 - Reverse Vowels of a String (String)
 - Valid Parentheses (Stack and Hash Map for String)
+- Is Subsequence (Simple String)
 
 ### Medium Questions
 
