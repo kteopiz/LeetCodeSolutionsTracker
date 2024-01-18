@@ -184,7 +184,33 @@ def is_subsequence(s,t):
         i += 1
     
     return count == len(s)
-            
+
+def valid_anagram(s,t):
+    s_ht = {}
+    t_ht = {}
+
+    if len(s) != len(t):
+        return False
+
+    for i in s:
+        if i not in s_ht:
+            s_ht[i] = 1
+        else:
+            s_ht[i] += 1
+    
+    for i in t:
+        if i not in s_ht:
+            return False
+        if i not in t_ht:
+            t_ht[i] = 1
+        else:
+            t_ht[i] += 1
+    
+    for i in t_ht:
+        if t_ht[i] != s_ht[i]:
+            return False
+    
+    return True
 
 
      

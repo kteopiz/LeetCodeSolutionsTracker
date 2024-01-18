@@ -23,6 +23,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Reverse Vowels of a String (String)
 - Valid Parentheses (Stack and Hash Map for String)
 - Is Subsequence (Simple String)
+- Is Valid Anagram (Hashmaps for each String)
 
 ### Medium Questions
 
