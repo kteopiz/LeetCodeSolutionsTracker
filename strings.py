@@ -113,6 +113,39 @@ def first_letter_twice(s) -> str:
         else:
             check.add(i)
 
+def rev_vowels_of_string(s):
+    if len(s) < 2:
+        return s
+
+    start, end = 0, len(s) - 1
+
+    vowels = set(['a','e','i','o','u','A','E','I','O','U'])
+    save = {}
+    while start < end:
+        if s[start] in vowels and s[end] in vowels:
+            save[start] = s[end]
+            save[end] = s[start]
+            start += 1
+            end -= 1
+        elif s[start] not in vowels and s[end] not in vowels:
+            start += 1
+            end -= 1
+        elif s[start] not in vowels:
+            start += 1
+        elif s[end] not in vowels:
+            end -= 1
+
+    res = ""
+
+    for i in range(len(s)):
+        if i in save:
+            res += save[i]
+        else:
+            res += s[i]
+    
+    return res
+    
+
 
      
 

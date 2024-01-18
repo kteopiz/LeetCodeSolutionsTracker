@@ -19,7 +19,8 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Can Place Flower (Array)
 - Unique Number of Occurrences (Array)
 - Reverse a Linked List (Linked List)
-- Most Frequent Number Following Key in an Array
+- Most Frequent Number Following Key in an Array (Array)
+- Reverse Vowels of a String (String)
 
 ### Medium Questions
 
