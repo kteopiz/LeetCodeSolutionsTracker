@@ -144,13 +144,44 @@ def rev_vowels_of_string(s):
             res += s[i]
     
     return res
-    
+
+def valid_parenthesis(s):
+
+    # Most optimized solution tricks:
+    # 1) Use a hash map to map closed bracket -> opening bracket
+    # 2) Use a stack to track the brackets that are not yet matched, and the order they are in to see if valid
+    # 3) Layer the breaking condtions: 
+        # a) First check if curr bracket is a closing bracket
+        # b) Then check if the stack is not empty
+        # Other wise append i to the stack
+
+    stack = []
+    match ={
+        ')' : '(',
+        ']' : '[',
+        '}': '{'
+    }
+
+    for i in s:
+        # Avoid a key error and an empty stack?, layer them correctly
+        if i in match:
+            if len(stack) > 0 and match[i] == stack[-1]:
+                stack.pop()
+            else:
+                stack.append(i)
+        else:
+            stack.append(i)
+
+    return len(stack) == 0
+
 
 
      
 
 if __name__ == "__main__":
-    print(not False and not False)
+    stack = []
+
+    print(stack is None)
     
 
 
