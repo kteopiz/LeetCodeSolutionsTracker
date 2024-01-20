@@ -212,13 +212,40 @@ def valid_anagram(s,t):
     
     return True
 
+def valid_palindrome(s):
+    # Upper Case ASCII Range -> 65 - 90
+    # Change lower to upper is +32
+    new =""
+
+    if len(s) == 1:
+        return True
+
+    for i in s:
+        if (ord(i) >= 97 and ord(i) <= 122) or (ord(i) >= 48 and ord(i) <= 57):
+            new += i
+        elif ord(i) >= 65 and ord(i) <= 90:
+            # Convert any uppercase to lowercase and add them
+            new += chr(ord(i) + 32)
+        
+    start, end = 0, len(new) - 1
+
+    if len(new) == 1:
+        return True
+
+    while start < end:
+        if new[start] != new[end]:
+            return False
+        start += 1
+        end -= 1
+    return True
+
 
      
 
 if __name__ == "__main__":
-    stack = []
+    s = "0P"
 
-    print(stack is None)
+    print(valid_palindrome(s))
     
 
 

@@ -24,6 +24,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Valid Parentheses (Stack and Hash Map for String)
 - Is Subsequence (Simple String)
 - Is Valid Anagram (Hashmaps for each String)
+- Valid Palindrome (String with Two Pointers)
 
 ### Medium Questions
 
