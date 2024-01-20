@@ -43,6 +43,14 @@ def same_tree(p,q):
 
     return first == second
 
+def inorder_traversal(root):
+    l = []
+    if root:
+        l += inorder_traversal(root.left)
+        l += [root.val]
+        l += inorder_traversal(root.right)
+    return l
+
 
 
 if __name__ == "__main__":
