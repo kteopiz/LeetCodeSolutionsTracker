@@ -26,6 +26,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Is Valid Anagram (Hashmaps for each String)
 - Valid Palindrome (String with Two Pointers)
 - Find the Index of the First Occurrence in a String (Fixed Length Sliding Window in String)
+- Same Tree (Preorder DFS on Binary Trees)
 
 ### Medium Questions
 

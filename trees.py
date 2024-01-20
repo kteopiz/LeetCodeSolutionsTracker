@@ -30,6 +30,19 @@ def max_depth_binary_tree(root: Optional[TreeNode]) -> int:
         else:
             return right_child
 
+def same_tree(p,q):
+    def preorder(root, traversal):
+        if root:
+            traversal = str(root.val)
+            traversal += preorder(root.left, traversal)
+            traversal += preorder(root.right, traversal)
+        return traversal
+
+    first = preorder(p,"")
+    second = preorder(q,"")
+
+    return first == second
+
 
 
 if __name__ == "__main__":
