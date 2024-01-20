@@ -239,6 +239,19 @@ def valid_palindrome(s):
         end -= 1
     return True
 
+def needle_haystack(haystack, needle):
+        
+    l = 0
+    r = len(needle) - 1
+
+    while r < len(haystack):
+        if needle == haystack[l:r+1]:
+            return l
+        l += 1
+        r += 1
+    
+    return -1
+
 
      
 

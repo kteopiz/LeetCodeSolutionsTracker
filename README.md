@@ -25,6 +25,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Is Subsequence (Simple String)
 - Is Valid Anagram (Hashmaps for each String)
 - Valid Palindrome (String with Two Pointers)
+- Find the Index of the First Occurrence in a String (Fixed Length Sliding Window in String)
 
 ### Medium Questions
 
