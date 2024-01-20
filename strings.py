@@ -240,7 +240,6 @@ def valid_palindrome(s):
     return True
 
 def needle_haystack(haystack, needle):
-        
     l = 0
     r = len(needle) - 1
 
