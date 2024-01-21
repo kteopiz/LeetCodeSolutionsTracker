@@ -28,6 +28,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Find the Index of the First Occurrence in a String (Fixed Length Sliding Window in String)
 - Same Tree (Preorder DFS on Binary Trees)
 - Inorder Binary Tree Traversal (Inorder DFS on Binary Tree)
+- Symmetric Tree (DFS on two subtrees of the same Binary Tree)
 
 ### Medium Questions
 

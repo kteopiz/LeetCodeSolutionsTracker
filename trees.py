@@ -51,6 +51,20 @@ def inorder_traversal(root):
         l += inorder_traversal(root.right)
     return l
 
+def symmetric_tree(root):
+    def dfs(left, right):
+        if not left and not right:
+            return True
+        # If we make it this far, we know at least ONE node exists.
+        # We can just do or
+        if not left or not right:
+            return False
+        # 3 conditions must return true:
+            # 1) vals at these nodes must be equal
+            # 2) and 3) the values from all nodes of the subtrees must be True also
+        return ((left.val == right.val) and dfs(left.right, right.left) and dfs(left.left, right.right))
+    return dfs(root.left, root.right)
+
 
 
 if __name__ == "__main__":
