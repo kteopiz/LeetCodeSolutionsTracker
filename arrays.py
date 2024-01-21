@@ -131,6 +131,25 @@ def following_key_array(nums, key):
             high = ht[x]
     return most_freq
 
+def remove_duplicates_inplace(nums):
+    k = 1
+    if len(nums) == 1:
+        return k
+
+    curr = nums[0]
+    insert = 1
+
+    for i in range(1, len(nums)): 
+        if curr == nums[i] and i < insert:
+            insert = i
+        if curr != nums[i]:
+            curr = nums[i]
+            nums[insert] = curr
+            k += 1
+            insert +=1
+    return k
+
+
 
 
 if __name__ == "__main__":

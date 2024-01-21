@@ -29,6 +29,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Same Tree (Preorder DFS on Binary Trees)
 - Inorder Binary Tree Traversal (Inorder DFS on Binary Tree)
 - Symmetric Tree (DFS on two subtrees of the same Binary Tree)
+- Remove Duplicates In-Place (Arrays no extra memory)
 
 ### Medium Questions
 
