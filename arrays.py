@@ -160,6 +160,24 @@ def set_mismatch(nums):
     for i in range(1, len(nums) + 1):
         if i not in seen:
             return [dup, i]
+    
+    def search_insert_pos(nums, target):
+        # Binary Search -> always return low
+        lo, hi = 0, len(nums) - 1
+        mid = 0
+        
+        while lo <= hi:
+            mid = (hi + lo) // 2
+            if nums[mid] > target:
+                hi = mid - 1
+            elif nums[mid] < target:
+                lo = mid + 1
+            else:
+                return mid
+        
+
+        return lo
+        
 
 
 

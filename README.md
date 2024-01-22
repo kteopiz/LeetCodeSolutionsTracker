@@ -31,6 +31,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Symmetric Tree (DFS on two subtrees of the same Binary Tree)
 - Remove Duplicates In-Place (Arrays no extra memory)
 - Set Mismatch (Set and Array Question)
+- Search Insert Position (Binary Search w/ special return low value)
 
 ### Medium Questions
 
