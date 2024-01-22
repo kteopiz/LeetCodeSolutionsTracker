@@ -149,6 +149,18 @@ def remove_duplicates_inplace(nums):
             insert +=1
     return k
 
+def set_mismatch(nums):
+    seen = set()
+    dup = 0
+    for i in range(len(nums)):
+        if nums[i] not in seen:
+            seen.add(nums[i])
+        else:
+            dup = nums[i]
+    for i in range(1, len(nums) + 1):
+        if i not in seen:
+            return [dup, i]
+
 
 
 
