@@ -32,6 +32,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Remove Duplicates In-Place (Arrays no extra memory)
 - Set Mismatch (Set and Array Question)
 - Search Insert Position (Binary Search w/ special return low value)
+- Kids with the Greatest Number of Candies (Sorting and Run through)
 
 ### Medium Questions
 

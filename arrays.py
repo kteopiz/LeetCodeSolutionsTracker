@@ -161,25 +161,36 @@ def set_mismatch(nums):
         if i not in seen:
             return [dup, i]
     
-    def search_insert_pos(nums, target):
-        # Binary Search -> always return low
-        lo, hi = 0, len(nums) - 1
-        mid = 0
-        
-        while lo <= hi:
-            mid = (hi + lo) // 2
-            if nums[mid] > target:
-                hi = mid - 1
-            elif nums[mid] < target:
-                lo = mid + 1
-            else:
-                return mid
-        
+def search_insert_pos(nums, target):
+    # Binary Search -> always return low
+    lo, hi = 0, len(nums) - 1
+    mid = 0
+    
+    while lo <= hi:
+        mid = (hi + lo) // 2
+        if nums[mid] > target:
+            hi = mid - 1
+        elif nums[mid] < target:
+            lo = mid + 1
+        else:
+            return mid
+    
 
-        return lo
-        
+    return lo
 
+def greatest_num_candies(candies, extras):
 
+    # Optimize with a sorting algorithms, not the built in function
+
+    high = max(candies)
+    
+    for i in range(len(candies)):
+        if candies[i] + extras >= high:
+            candies[i] = True
+        else:
+            candies[i] = False
+    
+    return candies
 
 
 if __name__ == "__main__":
