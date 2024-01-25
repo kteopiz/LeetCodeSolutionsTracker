@@ -33,6 +33,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Set Mismatch (Set and Array Question)
 - Search Insert Position (Binary Search w/ special return low value)
 - Kids with the Greatest Number of Candies (Sorting and Run through)
+- Length of Last Word (Start from end of String, track spaces seen)
 
 ### Medium Questions
 

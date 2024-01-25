@@ -251,13 +251,25 @@ def needle_haystack(haystack, needle):
     
     return -1
 
-
+def len_last_word(s):
+    count = 0
+    i = len(s) - 1
+    done_spaces = False
+    while i >= 0:
+        if s[i] == ' ' and not done_spaces:
+            i -= 1
+        elif s[i] == ' ' and done_spaces:
+            return count
+        else:
+            done_spaces = True
+            count += 1
+            i -= 1
+    return count
      
-
 if __name__ == "__main__":
-    s = "0P"
+    s ="luffy is still joyboy"
 
-    print(valid_palindrome(s))
+    print(len_last_word(s))
     
 
 
