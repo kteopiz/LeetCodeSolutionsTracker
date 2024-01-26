@@ -19,7 +19,7 @@ def length_of_longest_substring(s):
     slow, fast, longest = 0,0,0
 
     letter_set = set()
-
+    
     # Edge Cases for smaller strings
     if len(s) == 0:
          return 0

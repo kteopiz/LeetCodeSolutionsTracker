@@ -192,11 +192,31 @@ def greatest_num_candies(candies, extras):
     
     return candies
 
+def baseball_game(operations):
+    stack = []
+    total = 0
+    num_set = ('+', "D", "C")
+    for i in operations:
+        if i not in num_set:
+            stack.append(int(i))
+        elif i == '+':
+            stack.append(stack[-1] + stack[-2])
+        elif i == 'D':
+            stack.append(stack[-1] * 2)
+        elif i == 'C':
+            stack.pop(-1)
+    
+    
+    for i in stack:
+        total += i
+    return total
+
+
 
 if __name__ == "__main__":
-    n = [11,22,11,33,11,33]
+    n = ["5","-2","4","C","D","9","+","+"]
 
-    print(following_key_array(n, 11))
+    print(baseball_game(n))
 
     
 
