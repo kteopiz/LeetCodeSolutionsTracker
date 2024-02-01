@@ -14,7 +14,23 @@ def reverse_ll(head):
         slow = fast
         fast = temp
     return slow
-     
+
+def add_two_numbers(l1, l2):
+    def traverse(LL):
+        number = ""
+        while LL:
+            number += str(LL.val)
+            LL = LL.next
+        return number[::-1]
+
+    new_num = int(traverse(l1)) + int(traverse(l2))
+    res = None
+    for i in str(new_num):
+        temp = ListNode(i)
+        temp.next = res
+        res = temp
+    return res
+    
 
 
 

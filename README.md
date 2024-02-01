@@ -44,5 +44,6 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Longest Substring Wihtout Repeating Characters (String)
 - Product of Array Except Self (Array)
 - Maximum Subarray (Sliding Window, Prefix Negative Tracking)
+- Add Two Numbers (LinkedList keep track of reversals, use strings to keep track of numbers)
 
 ### Hard Questions
