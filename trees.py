@@ -65,6 +65,16 @@ def symmetric_tree(root):
         return ((left.val == right.val) and dfs(left.right, right.left) and dfs(left.left, right.right))
     return dfs(root.left, root.right)
 
+def search_BST(root, val):
+    while root:
+            if root.val > val:
+                root = root.left
+            elif root.val < val:
+                root = root.right
+            else:
+                return root
+    return None
+
 
 
 if __name__ == "__main__":

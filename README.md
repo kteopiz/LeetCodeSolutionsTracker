@@ -35,10 +35,14 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Kids with the Greatest Number of Candies (Sorting and Run through)
 - Length of Last Word (Start from end of String, track spaces seen)
 - Baseball Game (Stack with some peeking)
+- Search in BST (Simple BST Ordering Search)
+- Majority Element (Hashmap and Count)
+- Max Consecutive Ones (Simple Streak Counting In-Place)
 
 ### Medium Questions
 
 - Longest Substring Wihtout Repeating Characters (String)
 - Product of Array Except Self (Array)
+- Maximum Subarray (Sliding Window, Prefix Negative Tracking)
 
 ### Hard Questions

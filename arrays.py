@@ -211,7 +211,48 @@ def baseball_game(operations):
         total += i
     return total
 
+def max_subarray(nums):
+    maxSum, runningSum = float("-inf"), 0
+    l, r = 0, 0
 
+    while r < len(nums):
+        runningSum += nums[r]
+        if runningSum > maxSum:
+            maxSum = runningSum
+        if runningSum < 0:
+            runningSum = 0
+            r += 1
+            l = r
+        else:
+            r += 1
+    return maxSum
+
+def majority_element(nums):
+    majority = len(nums) / 2
+    ht = {}
+
+    for i in nums:
+        if i in ht:
+            ht[i] += 1
+        else:
+            ht[i] = 1
+    for i in ht:
+        if ht[i] > majority:
+            return i
+
+def max_consecutive_ones(nums):
+    Cstreak = 0
+    Mstreak = 0
+    for i in nums:
+        if i == 1:
+            Cstreak += 1
+        else:
+            if Cstreak > Mstreak:
+                Mstreak = Cstreak
+            Cstreak = 0
+    if Cstreak > Mstreak:
+        return Cstreak
+    return Mstreak
 
 if __name__ == "__main__":
     n = ["5","-2","4","C","D","9","+","+"]
