@@ -16,7 +16,7 @@ def reverse_ll(head):
     return slow
 
 def add_two_numbers(l1, l2):
-    def traverse(LL):
+    def traverse( LL):
         number = ""
         while LL:
             number += str(LL.val)
@@ -30,10 +30,6 @@ def add_two_numbers(l1, l2):
         temp.next = res
         res = temp
     return res
-    
-
-
-
 
 if __name__ == "__main__":
     x = ListNode(1)
