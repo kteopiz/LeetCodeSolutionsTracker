@@ -38,6 +38,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Search in BST (Simple BST Ordering Search)
 - Majority Element (Hashmap and Count)
 - Max Consecutive Ones (Simple Streak Counting In-Place)
+- Intersection of 2 Arrays (2 Sets keep track of one, other holds intersection elements)
 
 ### Medium Questions
 

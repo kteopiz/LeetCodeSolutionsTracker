@@ -254,6 +254,16 @@ def max_consecutive_ones(nums):
         return Cstreak
     return Mstreak
 
+def intersection_of_arrays(nums1, nums2):
+    s = set(nums1)
+    res = set()
+    for i in nums2: #O(n)
+        if i in s:
+            res.add(i)
+
+    return res
+
+
 if __name__ == "__main__":
     n = ["5","-2","4","C","D","9","+","+"]
 
