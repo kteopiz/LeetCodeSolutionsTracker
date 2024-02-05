@@ -277,12 +277,27 @@ def reverse_string(s):
         start += 1
         end -= 1
     return s
-    
+
+def first_unique_char(s):
+    count = {}
+    for i in s:
+        if i in count:
+            count[i] += 1
+        else:
+            count[i] = 1
+    for i in range(len(s)):
+        if count[s[i]] < 2:
+            return i
+    return -1
+        
+        
      
 if __name__ == "__main__":
-    s ="luffy is still joyboy"
+    s ="acaadcad"
 
-    print(len_last_word(s))
+    print(first_unique_char(s))
+
+    
     
 
 
