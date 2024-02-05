@@ -303,13 +303,32 @@ def group_anagrams(strs):
         else:
             res[tuple(group)] = [i]
     
-    return res.values()        
+    return res.values() 
+
+def anagrams_in_string(strs):
+    res = {}
+    counter = 0
+    for i in strs.split(' '):
+        count = [0] * 26
+        for c in i:
+            count[ord(c) - ord('a')] += 1
+        
+        # The value is a set of count arrays, will not add any duplicates
+        if tuple(count) in res:
+            res[tuple(count)].add(i)
+        else:
+            res[tuple(count)] = set()
+            res[tuple(count)].add(i)
+    print(res)
+    for i in res:
+        if len(res[i]) > 1:
+            counter += 1
+    return counter
+
+
 
 if __name__ == "__main__":
-    x = (1,2)
-    y = (2,1)
-
-    print(x == y)
+    print(anagrams_in_string("cars are very cool so are arcs and my os") )
 
     
     
