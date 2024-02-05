@@ -48,5 +48,6 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Product of Array Except Self (Array)
 - Maximum Subarray (Sliding Window, Prefix Negative Tracking)
 - Add Two Numbers (LinkedList keep track of reversals, use strings to keep track of numbers)
+- Group Anagrams (HT Key is a lowercase letter counter, value is the strings that match this key, return HT values in an array)
 
 ### Hard Questions

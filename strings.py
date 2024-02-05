@@ -290,12 +290,26 @@ def first_unique_char(s):
             return i
     return -1
         
-        
-     
-if __name__ == "__main__":
-    s ="acaadcad"
+def group_anagrams(strs):
+    res = {}
+    for i in strs:
+        group = [0] * 26
 
-    print(first_unique_char(s))
+        for c in i:
+            group[ord(c) - ord('a')] += 1
+        
+        if tuple(group) in res:
+            res[tuple(group)].append(i)
+        else:
+            res[tuple(group)] = [i]
+    
+    return res.values()        
+
+if __name__ == "__main__":
+    x = (1,2)
+    y = (2,1)
+
+    print(x == y)
 
     
     
