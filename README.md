@@ -50,5 +50,6 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Add Two Numbers (LinkedList keep track of reversals, use strings to keep track of numbers)
 - Group Anagrams (HT Key is a lowercase letter counter, value is the strings that match this key, return HT values in an array)
 - Anagrams in a String (Similar to Group Anagrams question, use set to filter duplicate words)
+- Top K Frequent Element (Currently brute forced with QS and Hashmap, optiimize with modified bucket sort!)
 
 ### Hard Questions
