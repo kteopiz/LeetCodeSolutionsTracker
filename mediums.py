@@ -32,5 +32,30 @@ def topKFrequent(nums, k):
     res = quicksort(keys, 0, len(keys) - 1, ht)
     return res[0: k]
 
+def optimize_top_k(nums, k):
+    ht = {}
+    bucket = [[]] * len(nums)
+    res = []
+    for i in nums:
+        if i in ht:
+            ht[i] += 1
+        else:
+            ht[i] = 1
+    for i in ht:
+        bucket[ht[i] - 1].append(i)
+        print(ht)
+    print(bucket)
+    j = len(bucket) - 1
+    while len(res) < k:
+        if len(bucket[j]) > 0 and len(res) < k:
+            for i in range(len(bucket[j])):
+                res.append(bucket[j][i])
+        j -= 1
+    return res
+
+
+
+
 if __name__ == "__main__":
-    pass
+     nums = [3, 0, 1, 0]
+     k = 2

@@ -328,7 +328,7 @@ def anagrams_in_string(strs):
 
 
 if __name__ == "__main__":
-    print(anagrams_in_string("cars are very cool so are arcs and my os") )
+    print([[0]] * 6)
 
     
     
