@@ -263,11 +263,21 @@ def intersection_of_arrays(nums1, nums2):
 
     return res
 
+def remove_element(nums, val):
+    k = 0
+    for i in range(len(nums)):
+        if nums[i] != val:
+            nums[k] = nums[i]
+            k += 1
+    return k
+        
+            
+   
 
 if __name__ == "__main__":
-    n = ["5","-2","4","C","D","9","+","+"]
+    n = [2,2,3]
 
-    print(baseball_game(n))
+    print(remove_element(n, 3))
 
     
 

@@ -41,6 +41,7 @@ Solutions will be done in Python, here is a list of the ones I have accomplished
 - Intersection of 2 Arrays (2 Sets keep track of one, other holds intersection elements)
 - Reverse String (2 Pointers Easy)
 - First Unique Char (Hashtable Count Letters in String)
+- Remove Element (Easy Array, condition question)
 
 ### Medium Questions
 
