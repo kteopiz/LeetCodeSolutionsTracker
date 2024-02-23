@@ -53,9 +53,35 @@ def optimize_top_k(nums, k):
         j -= 1
     return res
 
+def word_search(board, word):
+    ROWS, COLS = len(board), len(board[0])
+    path = set()
+    
+    # seek is the index of the char in word we are looking for
+    def dfs(r, c, seek):
+        if seek == len(word):
+            return True 
+        elif r < 0 or c < 0 or r >= ROWS or c >= COLS or (r,c) in path or word[seek] != board[r][c]:
+            return False
+        # We have made it past the last letter of the word
+        seek += 1
+        path.add((r, c))
+        res = (dfs(r - 1, c, seek) or dfs(r + 1, c, seek) or dfs(r, c - 1, seek) or dfs(r, c + 1, seek))
+        path.remove((r, c))
+        return res
 
+    for i in range(ROWS):
+        for j in range(COLS):
+            found = dfs(i, j, 0)
+            if found:
+                return True
+    return False
+
+
+
+    
 
 
 if __name__ == "__main__":
-     nums = [3, 0, 1, 0]
-     k = 2
+    board = [['a', 'b'], ['c', 'd']]
+    print(word_search(board, "abd"))
